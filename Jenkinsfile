@@ -6,7 +6,7 @@ pipeline {
             {
                 steps
                 {
-                sh 'sudo sh  /home/pp/Desktop/'docker-compose-project'/backup.sh'
+                sh '/home/pp/Desktop/'docker-compose-project'/backup.sh'
                 }
             }
              stage('stop Image')
