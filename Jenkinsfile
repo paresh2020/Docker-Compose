@@ -2,13 +2,13 @@ pipeline {
     agent any
     stages
         {
-             stage('Backup Database')
-            {
-                steps
-                {
-                sh 'sh backup.sh'
-                }
-            }
+            # stage('Backup Database')
+           # {
+            #    steps
+             #   {
+            #    sh 'sh backup.sh'
+            #    }
+           # }
              stage('stop Image')
             {
                 steps
