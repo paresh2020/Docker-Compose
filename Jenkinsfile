@@ -2,13 +2,13 @@ pipeline {
     agent any
     stages
         {
-           /*  stage('Backup Database')
+             stage('Backup Database')
             {
                 steps
                 {
-                sh 'sh backup.sh'
+                sudo sh /home/pp/Desktop/'docker-compose-project'/backup.sh
                 }
-            }*/
+            }
              stage('stop Image')
             {
                 steps
