@@ -9,13 +9,7 @@ pipeline {
                 sh '/home/pp/Desktop/docker-compose-project/backup.sh'
                 }
             }
-             stage('stop Image')
-            {
-                steps
-                {
-                sh 'sudo docker-compose stop'
-                }
-            }
+
             stage('Clone Reposirory')
             {
                 steps
@@ -28,6 +22,13 @@ pipeline {
                 steps
                 {
                 sh 'sudo docker-compose build'
+                }
+            }
+            stage('stop Image')
+            {
+                steps
+                {
+                sh 'sudo docker-compose stop'
                 }
             }
             stage('Run Image')
