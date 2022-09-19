@@ -2,19 +2,20 @@ pipeline {
     agent any
     stages
         {
-             stage('Backup Database')
-            {
-                steps
-                {
-                sh '/home/pp/Desktop/docker-compose-project/backup.sh'
-                }
-            }
+         
 
             stage('Clone Reposirory')
             {
                 steps
                 {
                 checkout scm
+                }
+            }
+            stage('Backup Database')
+            {
+                steps
+                {
+                sh 'backup.sh'
                 }
             }
             stage('Build Image')
