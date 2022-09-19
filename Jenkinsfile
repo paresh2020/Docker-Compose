@@ -11,13 +11,7 @@ pipeline {
                 checkout scm
                 }
             }
-            stage('Backup Database')
-            {
-                steps
-                {
-                sh 'backup.sh'
-                }
-            }
+
             stage('Build Image')
             {
                 steps
