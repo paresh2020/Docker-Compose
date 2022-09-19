@@ -25,13 +25,7 @@ pipeline {
                 sh 'sudo docker-compose build'
                 }
             }
-            stage('stop Image')
-            {
-                steps
-                {
-                sh 'sudo docker-compose stop'
-                }
-            }
+
             stage('Run Image')
             {
                 steps
